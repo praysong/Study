@@ -45,7 +45,7 @@ import pandas as pd
 import glob
 
 # 합칠 CSV 파일들의 경로
-file_paths = glob.glob("c:/_data/mini/dff/*.csv")
+file_paths = glob.glob("c:/_data/mini/fff/*.csv")
 
 # 모든 CSV 파일을 하나의 데이터프레임으로 결합
 dfs = []
@@ -58,7 +58,8 @@ for file_path in file_paths:
 combined_df = pd.concat(dfs, ignore_index=True)
 
 # 결합된 데이터프레임을 CSV 파일로 저장
-combined_df.to_csv("c:/_data/mini/2023년1~8월 버스 이용객수2.csv", index=False)
+combined_df.to_csv("c:/_data/mini/2023년1~8월 일별 버스 이용객수.csv", index=False)
 
 # # # '열이름' 열을 기준으로 오름차순으로 정렬
 # # 버스 = df.sort_values(by=['년(YEAR)','월(MONTH)','일(DAY)','시간(HOUR)','분_30분단위(HALF_HOUR)'], ascending=False)
+
